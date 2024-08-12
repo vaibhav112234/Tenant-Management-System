@@ -1,0 +1,277 @@
+{%  load static %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tenant</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flag-icon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cs-skin-elastic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jqvmap.min.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+               <a class="navbar-brand" href="./"><img class="user-avatar rounded-circle" src="{% static 'images/tenant.jpg' %}" height="40px" width="40px" alt="Tenant">&nbsp Tenant</a>
+                <a class="navbar-brand hidden" href="./"><img src="{% static 'images/tenant.jpg' %}" alt="Tenant"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/dashboard"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Tenant</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/add_tenant">Add</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="/view_tenant">View</a></li>
+
+
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Main Meter Entry</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="/main_add">Add</a></li>
+                            <li><i class="fa fa-table"></i><a href="/main_view">View</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Sub Meter Entry</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="/sub_add">Add</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="/sub_view">View</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title">Icons</h3><!-- /.menu-title -->
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-truck"></i>Tanker Entry</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="/tanker_add">Add</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="/tanker_view">View</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/report"> <i class="menu-icon fa fa-bar-chart"></i>Report </a>
+                    </li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <img class="user-avatar rounded-circle" src="{% static 'images/admin3.jpg' %}" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="/profile"><i class="fa fa-user"></i> My Profile</a>
+
+
+
+                            <a class="nav-link" href="/Logout"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                    <div class="language-select dropdown" id="language-select">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
+                            <i class="flag-icon flag-icon-us"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="language">
+                            <div class="dropdown-item">
+                                <span class="flag-icon flag-icon-fr"></span>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-es"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </div>
+                            <div class="dropdown-item">
+                                <i class="flag-icon flag-icon-it"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Dashboard/Tanker_Entry</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <div class="content mt-3">
+
+            <div class="col-sm-12">
+
+            </div>
+            <center>
+  <h4> Tanker Entry </h4><br>
+     <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+{% for i in data %}
+    <form action="update_tanker" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+<!--     <input type="text" name="roomno" placeholder="Month" class="form-control" required><br>-->
+         <input type="hidden" name="id" value="{{i.id}}">
+        <div class="form-group">
+                         <label for="course1"></label>
+                         <select class="form-control" id="course1" name="month" value="{{i.month}}"  required>
+                             <option value="" disabled selected>Select Month</option>
+                             <option value="january">January</option>
+                             <option value="february">February</option>
+                             <option value="march">March</option>
+                             <option value="april">April</option>
+                             <option value="may">May</option>
+                             <option value="june">June</option>
+                             <option value="july">July</option>
+                             <option value="august">August</option>
+                             <option value="september">September</option>
+                             <option value="october">October</option>
+                             <option value="november">November</option>
+                             <option value="december">December</option>
+                             <!-- Add more options as needed-->
+                         </select>
+                     </div>
+
+        <input type="text" name="year" placeholder=" Year" class="form-control" value="{{i.year}}" required><br>
+        <input type="text" name="ttanker" placeholder="Total Tanker" class="form-control" value="{{i.ttanker}}" required><br>
+        <input type="text" name="amt" placeholder="Amount per Tanker" class="form-control"  value="{{i.amt}}" required><br>
+
+         <input type="text" name="stenant" placeholder="Select No of Tenant" class="form-control" value="{{i.stenant}}" required><br>
+
+
+        <button type="submit" class="btn btn-warning">update</button>
+
+
+
+    </form>
+            {% endfor %}
+
+                </div>
+        <div class="col-sm-4"></div>
+
+
+</div>
+</center>
+
+    </div>
+
+        </script>
+
+
+
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+    <script src="{% static 'js/Chart.bundle.min.js' %}"></script>
+    <script src="{% static 'js/dashboard.js' %}"></script>
+    <script src="{% static 'js/widgets.js' %}"></script>
+    <script src="{% static 'js/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'js/jquery.vmap.world.js' %}"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
+</body>
+
+</html>
